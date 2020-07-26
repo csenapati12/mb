@@ -1,5 +1,5 @@
 node(){
-    
+    properties([parameters([string(defaultValue: 'chaitanya', description: 'sczcsc', name: 'name', trim: false)])])
     stage("checkout code"){
         checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/csenapati12/java-tomcat-maven-example.git']]]
         echo "checkout"
