@@ -2,17 +2,17 @@ pipeline{
 agent any
 stages{
    stage("checkout"){
-      step{
+      steps{
       checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'githubcredentials', url: 'https://github.com/csenapati12/java-tomcat-maven-example.git']]]
       }
    }
    stage("checkout"){
-      step{
+      steps{
       sh label: '', script: 'mvn package'
       }
    }
    stage("checkout"){
-      step{
+      steps{
        sh label: '', script: '''ls /var/lib/jenkins
 cd /var/lib/jenkins/workspace/scripted-pipeline/target
 cp java-tomcat-maven-example.war /var/lib/jenkins
