@@ -1,5 +1,6 @@
 pipeline{
 agent any
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '2', numToKeepStr: '')), parameters([choice(choices: ['DEV', 'QA', 'UAT', 'PROD'], description: 'Please select the environment for deploy', name: 'ENV')])])
 stages{
    stage("checkout"){
       steps{
