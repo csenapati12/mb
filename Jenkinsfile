@@ -9,9 +9,9 @@ stage("mvn build"){
 }
 stage("Deploy"){
     echo "Execute shell" 
-   sh label: '', script: '''ls /var/lin/jenkins
+   sh label: '', script: '''ls /var/lib/jenkins
 cd /var/lib/jenkins/workspace/scripted-pipeline/target
-cp java-tomcat-maven-example.war /var/lin/jenkins
+cp java-tomcat-maven-example.war /var/lib/jenkins
 ls /var/lib/jenkins'''
 }
 
