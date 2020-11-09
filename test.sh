@@ -6,5 +6,5 @@ release_tag=$2
 
 echo 'first1 ' $1
 echo '2nd1 ' $2
-echo 'first ' build_mode 
-echo '2nd ' release_tag
+echo "222  $build_mode" 
+echo "222 $release_tag"
