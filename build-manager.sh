@@ -9,9 +9,9 @@
 # read a given variable from a given file in
 # usage: MY_VAR=$(read_var MY_VAR .env)
 
-build_mode =$1
-release_tag=$2
-echo " inside build manager.sh 1**** $build_mode  2 ******** $release_tag" 
+BUILD_MODE =$1
+RELEASE_TAG=$2
+echo " inside build manager.sh 1**** $BUILD_MODE  2 ******** $RELEASE_TAG" 
 
 
 # build the base image
