@@ -11,6 +11,7 @@
 
 build_mode =$1
 release_tag=$2
+echo " inside build manager.sh 1**** $build_mode  2 ******** $release_tag" 
 
 
 # build the base image
