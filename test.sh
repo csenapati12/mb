@@ -1,4 +1,5 @@
 #!/bin/bash
+baz.sh $@
 
 build_mode =$1
 release_tag=$2
