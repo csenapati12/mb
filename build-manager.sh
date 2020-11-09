@@ -90,7 +90,7 @@ build_server () {
 	echo -e "{\"NxGenVer\": \"$nxgen_dglux_tag\", \"BuildNo\": \"$server_hash\", \"ConfigEngine\": \"$config_engine_tag\", \"QueryEngine\": \"$query_engine_tag\", \"LaunchService\": \"$launch_service_tag\", \"ReleaseNo\": \"$release_tag\"}" > ./build-server/server_version.json
 
 	# build context is in ./build-server
-	sudo docker build -t nxgen.azurecr.io/"$build_mode":"$release_tag" --build-arg BASE_TAG=$release_tag --label "build.version=$release_tag" -f ./build-server/server-Dockerfile ./build-server || error_out "docker build for server image failed!"
+	sudo docker build -t nxgen.azurecr.io/"$build_mode":$2 --build-arg BASE_TAG=$2 --label "build.version=$2 -f ./build-server/server-Dockerfile ./build-server || error_out "docker build for server image failed!"
 }
 
 # build the dev image
@@ -121,10 +121,10 @@ build_fluent () {
 
 build_base
 
-if [ "$build_mode" == "server" ]
+if [ $1 == "server" ]
 then
 	build_server
-elif [ "$build_mode" == "dev" ]
+elif [ $1 == "dev" ]
 then
 	build_dev
 else
