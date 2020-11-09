@@ -9,9 +9,10 @@
 # read a given variable from a given file in
 # usage: MY_VAR=$(read_var MY_VAR .env)
 
-BUILD_MODE =$1
-RELEASE_TAG=$2
-echo $BUILD_MODE $RELEASE_TAG" 
+#BUILD_MODE =$1
+#RELEASE_TAG=$2
+echo $1 $2 
+#echo $BUILD_MODE $RELEASE_TAG" 
 
 
 # build the base image
@@ -115,8 +116,8 @@ build_fluent () {
 
 # declare global variables for our settings
 # pass in all the commandline parameters to parse_parameters
-parse_parameters "$@"
-check_params
+#parse_parameters "$@"
+#check_params
 
 build_base
 
