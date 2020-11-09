@@ -114,13 +114,6 @@ build_fluent () {
 # script starts here ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # declare global variables for our settings
-build_mode=""
-release_tag=""
-nxgen_dglux_tag=""
-query_engine_tag=""
-config_engine_tag=""
-launch_service_tag=""
-
 # pass in all the commandline parameters to parse_parameters
 parse_parameters "$@"
 check_params
