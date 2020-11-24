@@ -1,5 +1,5 @@
 pipeline{
- agent amy
+ agent any
     stages{
              stage ('Code - Checkout') {
                  steps{
@@ -29,5 +29,6 @@ pipeline{
                       '''
                  }
           }
+       }          
     }
 }
