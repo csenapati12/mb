@@ -23,14 +23,14 @@ pipeline{
                       echo "22222222222 ${TAG_VALUE}"
                      withCredentials([usernamePassword(credentialsId: 'Test-lab', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
                        echo "333333333333333 ${TAG_VALUE}"
-                    sh '''
+                    sh """
 
-                    git tag '${TAG_VALUE}'
+                    git tag ${TAG_VALUE}
                     git remote set-url origin https://$USERNAME:$PASSWORD@github.com/csenapati12/mb.git
                     git remote -v
-                    git push origin '${TAG_VALUE}'
+                    git push origin ${TAG_VALUE}
 
-                      '''
+                     """
                  }
           }
        }          
