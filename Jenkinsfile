@@ -1,4 +1,4 @@
-TAG_VALUE =''
+
 pipeline{
  agent any
     stages{
@@ -12,7 +12,7 @@ pipeline{
                     script{ 
                       echo "start CI/CD - api-gateway"
                     //  BUILD_NUMBER = VersionNumber(projectStartDate: '2017-05-22', versionNumberString: 'Integration-test${BUILDS_ALL_TIME}', versionPrefix:'',  worstResultForIncrement:'SUCCESS')
-                      TAG_VALUE="test"
+                      TAG_VALUE="122"
                       
                      }
                    echo "1111111111111 ${TAG_VALUE}"
