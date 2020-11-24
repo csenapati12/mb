@@ -1,3 +1,4 @@
+TAG_VALUE =''
 pipeline{
  agent any
     stages{
@@ -14,11 +15,14 @@ pipeline{
                       TAG_VALUE="test"
                       
                      }
+                   echo "1111111111111 ${TAG_VALUE}"
                   }   
                }
                 stage ('Tag-commit') {
                     steps{
+                      echo "22222222222 ${TAG_VALUE}"
                      withCredentials([usernamePassword(credentialsId: 'Test-lab', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+                       echo "333333333333333 ${TAG_VALUE}"
                     sh '''
 
                     git tag '${TAG_VALUE}'
