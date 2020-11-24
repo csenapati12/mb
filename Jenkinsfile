@@ -6,9 +6,9 @@ pipeline{
                    checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/csenapati12/mb.git']]]
                        }
                }
-              stage ('get value') {
-                  script{
+              stage ('get value') {                  
                  steps{
+                    script{ 
                       echo "start CI/CD - api-gateway"
                     //  BUILD_NUMBER = VersionNumber(projectStartDate: '2017-05-22', versionNumberString: 'Integration-test${BUILDS_ALL_TIME}', versionPrefix:'',  worstResultForIncrement:'SUCCESS')
                       TAG_VALUE="test"
