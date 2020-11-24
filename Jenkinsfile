@@ -18,11 +18,11 @@ pipeline{
                }
                 stage ('Tag-commit') {
                     steps{
-                     withCredentials([usernamePassword(credentialsId: 'Bharathtest', passwordVariable: 'Bharathpass', usernameVariable: 'Bharath')]) {
+                     withCredentials([usernamePassword(credentialsId: 'Test-lab', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
                     sh '''
 
                     git tag '${TAG_VALUE}'
-                    git remote set-url origin https://$Bharath:$Bharathpass@gitlab.com/SkyloTechnologies/platform/backend/cloud/api-gateway.git
+                    git remote set-url origin https://$USERNAME:$PASSWORD@github.com/csenapati12/mb.git
                     git remote -v
                     git push origin '${TAG_VALUE}'
 
