@@ -1,0 +1,14 @@
+node(){
+    if("$JOB_NAME" == "job-name-test"){
+        stage("job1"){
+           echo "Job name is $JOB_NAME" 
+        }
+            
+    }
+    if("$JOB_NAME" == "job-name-test1"){
+        stage("job2"){
+           echo "Job name is $JOB_NAME" 
+        }
+            
+    }
+}
