@@ -18,7 +18,7 @@ then
 	echo "job-name-test"
         echo "job-name-test"
 	echo "Chaitanya"	
-	echo "Check  !!!!!!!!!!!!!!!!!!!$TEST_NAME"
+	echo "Check  123  !!!!!!!!!!!!!!!!!!!$TEST_NAME"
 	echo "job-name-test !!!!!!!!!$build_mode$Release_Version$job_name"
   
 elif [ $job_name == "job-name-test1" ]
@@ -26,7 +26,7 @@ then
 	echo "job-name-test1"
         echo "job-name-test1"
 	echo "Senapati"	
-	echo "Senapati"
+	echo "Check  7777777777777!!!!!!!!!!!!!!!!!!!$TEST_NAME"
 	echo "job-name-test1********** !!!!!!!!!$build_mode$Release_Version$job_name"
 	
 else
