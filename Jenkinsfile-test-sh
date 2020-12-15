@@ -1,7 +1,5 @@
 node(){
 
-build_mode=$1
-Release_Version=$2
 job_mode="$JOB_NAME"
     //if("$JOB_NAME" == "job-name-test"){
         stage("job1"){
