@@ -16,12 +16,19 @@ job_name=$3
 if [ $job_name == "job-name-test" ]
 then
 	echo "job-name-test"
-  echo "job-name-test1"
+        echo "job-name-test"
+	echo "Chaitanya"	
+	echo "Chaitanya"
+	echo "job-name-test !!!!!!!!!$build_mode$Release_Version$job_name"
   
 elif [ $job_name == "job-name-test1" ]
 then
 	echo "job-name-test1"
-  echo "job-name-test1"
+        echo "job-name-test1"
+	echo "Senapati"	
+	echo "Senapati"
+	echo "job-name-test1********** !!!!!!!!!$build_mode$Release_Version$job_name"
+	
 else
 	echo "Invalid job name."
 fi
