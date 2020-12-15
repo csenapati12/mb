@@ -1,6 +1,9 @@
 node(){
 
 job_mode="$JOB_NAME"
+       stage("Checkout"){
+       checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: '*/develop']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/csenapati12/mb.git']]]}
+         }
    // if("$JOB_NAME" == "job-name-test"){
         stage("job-name-test"){
            echo "Job name is $JOB_NAME"  
