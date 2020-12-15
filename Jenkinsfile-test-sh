@@ -6,6 +6,8 @@ job_mode="$JOB_NAME"
            echo "Job name is $JOB_NAME"  
            echo "new job name $job_mode"
            """
+           ls la
+           echo "$Release_Version $job_mode"
            ./test.sh $build_mode $Release_Version $job_mode
            """
         }            
@@ -15,6 +17,8 @@ job_mode="$JOB_NAME"
            echo "Job name is $JOB_NAME" 
            """
            ./test.sh $build_mode $Release_Version $job_mode
+            ls la
+           echo "$Release_Version $job_mode"
            """
         }           
    }
