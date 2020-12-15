@@ -6,8 +6,9 @@ job_mode="$JOB_NAME"
            echo "Job name is $JOB_NAME"  
            echo "new job name $job_mode"
           sh"""
-          
+          ls
            echo "$Release_Version $job_mode"
+           chmod 777 test.sh
            ./test.sh $build_mode $Release_Version $job_mode
            """
         }            
@@ -16,8 +17,9 @@ job_mode="$JOB_NAME"
         stage("job-name-test1"){
            echo "Job name is $JOB_NAME" 
           sh """
-           ./test.sh $build_mode $Release_Version $job_mode
-            
+          ls
+            chmod 777 test.sh
+           ./test.sh $build_mode $Release_Version $job_mode            
            echo "$Release_Version $job_mode"
            """
         }           
