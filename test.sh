@@ -18,7 +18,7 @@ then
 	echo "job-name-test"
         echo "job-name-test"
 	echo "Chaitanya"	
-	echo "Chaitanya"
+	echo "Check  !!!!!!!!!!!!!!!!!!!$TEST_NAME"
 	echo "job-name-test !!!!!!!!!$build_mode$Release_Version$job_name"
   
 elif [ $job_name == "job-name-test1" ]
