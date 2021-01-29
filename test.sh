@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # stop the script on error
-
+#added a line
 # set -e
 
 # functions have to be defined before everything else
